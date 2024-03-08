@@ -218,7 +218,7 @@ metrics <- function(x, model, bandwidth, beta, N = 1e5L, kernel = c("mig","tnorm
   if(kernel == "mig"){
     fhatx <- mig::mig_kdens(x = x, newdata = tsamp, Omega = bandwidth, beta = beta, log = TRUE)
   } else{
-    fhatx <- kdens_tnorm(x = x, newdata = tsamp, Sigma = bandwidth, beta = beta, log = TRUE)
+    fhatx <- mig::tellipt_kdens(x = x, newdata = tsamp, Sigma = bandwidth, beta = beta, log = TRUE)
   }
   c(rmise = sqrt(mean((exp(fx) - exp(fhatx))^2)),
     kldiv = mean(fx) - mean(fhatx))
