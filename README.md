@@ -12,5 +12,6 @@ The corresponding **R** package can be found on Github at: https://github.com/lb
 **Files**:
 
 - `simulation_study_MIG_R1.R` launches the simulation study. Scenarios were run sequentially using the `simsalapar` package in **R** on a local computer.
-- `utils.R` contains utilities to generate from the simulation scenarios and evaluate true density for the four distributions $$F_1--F_4$$. It contains the workhorse `doOne` that generates results in the simulation study for a single scenario.
--
+- `utils.R` contains utilities to generate from the simulation scenarios and evaluate true density for the four distributions $$F_1$$-$F_4$$. It contains the workhorse `doOne` that generates results in the simulation study for a single scenario.
+- The two `.rds` files containing the results from simulation runs. The code was ran separately for the boundary estimator, contrary to the simulation results.
+- The `fig*.R` and `tbl*.R` files produce the figures (in the order of the paper) and tables.
